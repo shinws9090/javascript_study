@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	function CheckWeight(name, height, weight) {
+		this.userName = name;
+		this.userHeight = height;
+		this.userWeight = weight;
+		this.minWeight;
+		this.maxWeight;
+	}
+	CheckWeight.prototype.getinfo = function() {
+		var str = "";
+		str += "이름" + this.userName + ", ";
+		str += "키" + this.userHeight + ", ";
+		str += "몸무게" + this.userWeight + ", ";
+		return str;
+	}
+
+	CheckWeight.prototype.getResult = function() {
+		this.minWeight = (this.userHeight - 100) * 0.9 - 5;
+		this.maxWeight = (this.userHeight - 100) * 0.9 + 5;
+
+		if (this.userWeight >= this.minWeight
+				&& this.userWeight <= this.maxWeight) {
+			return "정상입니다";
+		} else if (this.userWeight < this.minWeight) {
+			return "미달입니다";
+		} else {
+			return "과체중 입니다";
+		}
+	}
+
+	var jang = new CheckWeight("장보라", 168, 62);
+	var park = new CheckWeight("박보라", 168, 62);
+
+	console.log(jang);
+	console.log(park);
+
+	document.write(jang.getinfo());
+	document.write(jang.getResult(),"<br>");
+	document.write(jang.getResult === park.getResult);
+</script>
+</head>
+<body>
+
+</body>
+</html>

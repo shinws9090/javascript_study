@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="" type="text/css">
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="fuck.js"></script>
+<script>
+	$(function() {
+		$(".btn1").click(function(e){
+			e.preventDefault();/*form,a 테그 동작 차단*/
+			$(".txt1").css({"background-color":"#ff0"});
+		});
+		$(".btn2").click(function(e){
+			$(".txt2").css({"background-color":"#0ff"});
+		});
+		$(".btn3").dblclick(function(e){
+			$(".txt3").css({"background-color":"#0f0"});
+		});
+		
+	});
+</script>
+</head>
+<body>
+	<p>
+		<a href="http://www.easyspub.co.kr/" class="btn1">버튼1</a>
+	</p>
+	<p class="txt1">내용1</p>
+	<p>
+		<a href="http://www.easyspub.co.kr/" class="btn2">버튼2</a>
+	</p>
+	<p class="txt2">내용2</p>
+	<p>
+		<button class="btn3">버튼3</button>
+	</p>
+	<p class="txt3">내용3</p>
+</body>
+</html>

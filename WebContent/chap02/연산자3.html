@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+
+var userHeight =180;
+var userWeight = 74;
+
+var normal_w = (userHeight - 100)*0.9;
+document.write(normal_w+"<br>");
+
+var name = prompt("당신의 이름은?", "");
+var height = prompt("당신의 신장은?", "");
+var weight = prompt("당신의 몸무게는?", "");
+
+var normal_w = (height - 100)*0.9;
+
+var res = weight>= normal_w -5 && weight<= normal_w+5;
+res = res? "적정체중 입니다" : "씹돼지 입니다";
+document.write(name + " 님은  "+ res);
+	
+</script>
+
+</head>
+<body>
+
+</body>
+</html>

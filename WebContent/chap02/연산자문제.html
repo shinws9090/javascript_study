@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+
+var price1 = prompt("교통비", "");
+var price2 = prompt("식비", "");
+var price3 = prompt("음료비", "");
+
+var res = 10000 < price1+price2+price3;
+var sub = (Number(price1)+Number(price2)+Number(price3))-10000;
+res = res? sub +"초과" : "잘했네요 ";
+
+document.write(res);
+
+</script>
+
+</head>
+<body>
+
+</body>
+</html>

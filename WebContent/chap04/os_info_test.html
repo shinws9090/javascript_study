@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" >
+<title>Insert title here</title>
+<meta name="viewport"  >
+<script type="text/javascript">
+
+var info = navigator.userAgent.toLowerCase();
+var osImg =null;
+
+if(info.indexOf('windows')>=0){
+	osImg = "windows.png";
+}else if(info.indexOf('macintosh')>=0){
+	osImg = "macintosh.png";
+}else if(info.indexOf('iphone')>=0){
+	osImg = "iphone.png";
+}else if(info.indexOf('android')>=0){
+	osImg = "android.png";
+}	
+
+dcument.write("<img src='images/"+osImg+"'>","<br>")
+
+var scr = screen;
+var sc_w = scr.width;
+var sc_h = scr.height;
+
+dcument.write("모니터 해상도 너비"+sc_w+"px","<br>")
+dcument.write("모니터 해상도 높이"+sc_h+"px","<br>")
+
+
+</script>
+</head>
+<body>
+<img  src="images/windows.png">
+</body>
+</html>

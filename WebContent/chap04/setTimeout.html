@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+
+var addNum = 0;
+
+var auto_1 = setTimeout(function(){
+	addNum++;
+	console.log("addNum : "+ addNum);
+},5000);
+
+</script>
+</head>
+<body>
+
+<button onclick="clearInterval(auto_1)">증가 정지</button>
+
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+$(function f(){
+	$("#b").parent().css("border","1px solid #ccc").css("background-color","#ff0");
+	$("#b .t").css("border","2px solid black").css("background-color","#f0f");
+	$("ul>#c").css("border","3px solid black").css("background-color","#0ff");
+});
+</script>
+</head>
+<body>
+	<ul>
+		<li id="a">부모요소
+			<ul id="b">
+				<li class="t">하위요소</li>
+				<li class="t">하위요소</li>
+			</ul>
+		</li>
+		
+		<li id="c">자식요소</li>
+		
+	</ul>
+
+</body>
+</html>

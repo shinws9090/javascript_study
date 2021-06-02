@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="" type="text/css">
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+	$(function() {
+
+		$.ajax({
+			url : "MOCK_DATA.json",
+			dataType : "json",
+			success : function(data) {
+				console.log(data);
+				if (data.length > 0) {
+					var tb = $("<table />");
+					$.each(data, function(idx, obj) {
+
+						var row = $("<tr />").append($("<td />").text(obj.id),
+								$("<td />").text(obj.first_name),
+								$("<td />").text(obj.last_name),
+								$("<td />").text(obj.email),
+								$("<td />").text(obj.gender));
+						tb.append(row);
+					});
+					/* for ( var i in data) {
+						var row = $("<tr />").append($("<td />").text(data[i].id),
+								$("<td />").text(data[i].first_name),
+								$("<td />").text(data[i].last_name),
+								$("<td />").text(data[i].email),
+								$("<td />").text(data[i].gender));
+						
+						tb.append(row);
+						}
+					*/
+				}
+
+				$(".wrap").append(tb);
+			}
+
+		});
+	});
+</script>
+</head>
+<body>
+
+	<div class="wrap"></div>
+
+</body>
+</html>

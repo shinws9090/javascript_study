@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+.oddbtn {
+	color: #f00
+}
+</style>
+<link rel="stylesheet" href="" type="text/css">
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+	$(function() {
+		/*단독 이벤트 메서드*/
+		clickHandler = function() {
+			
+			/* $(".btn1").parent().next().css({"color" : "#f00"}); */
+			
+			
+			var isOdd = $(".btn1").parent().next().hasClass("oddbtn");/*클래스 적용/미적용*/
+			var t = $(".btn1").parent().next();
+			if(isOdd){
+				t.removeClass("oddbtn");
+			}else{
+				t.addClass("oddbtn");
+			}
+		}
+
+		$(".btn1").click(clickHandler);
+
+		$(".btn1").dblclick(function() {
+			$(".btn1").parent().next().css({
+				"color" : "#00f"
+			});
+		});
+
+		/*그룹 이벤트 메서드*/
+		$(".btn2").on({
+			"mouseover focus" : function() {
+				$(".btn2").parent().next().css({
+					"color" : "#f00"
+				});
+			},
+			"mouseout blur" : function() {
+				$(".btn2").parent().next().css({
+					"color" : "#00f"
+				});
+			}
+		});
+
+		/*이벤트 강재호출*/
+		/* $(".btn1").dblclick();
+		$(".btn2").trigger("mouseout"); */
+
+		/*이벤트 효과 제거*/
+		$(".btn3").click(function() {
+			$(".btn1").off("click");
+			$(".btn2").off("mouseover focus");
+		})
+
+	});
+</script>
+</head>
+<body>
+	<p>
+		<button class="btn1">버튼1</button>
+	</p>
+	<p>내용1</p>
+	<p>
+		<button class="btn2">버튼2</button>
+	</p>
+	<p>내용2</p>
+	<p>
+		<button class="btn3">버튼3</button>
+	</p>
+	<p>내용3</p>
+
+</body>
+</html>

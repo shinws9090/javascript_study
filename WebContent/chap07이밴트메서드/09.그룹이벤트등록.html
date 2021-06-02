@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="" type="text/css">
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+	function abc(){
+		alert("HI");
+	}
+	$(function() {
+		//그룹
+		$(".btn_1").on("mouseover focus", abc);
+		
+		//도큐먼트형식
+		$(document).on("mouseover focus",".btn_2",abc);
+		
+		//하위요소
+		$(".btn_wrap").delegate(".btn_3", "mouseover focus", abc);
+
+		//한번만 동작		
+		$(document).one("mouseover focus",".btn_4", abc);
+		
+		
+	});
+</script>
+</head>
+<body>
+	<div id="warp">
+		<p>
+			<button class="btn_1">버튼1</button>
+		</p>
+		<p>
+			<button class="btn_2">버튼2</button>
+		</p>
+	</div>
+
+	<div class="btn_wrap">
+		<p>
+			<button class="btn_3">버튼3</button>
+		</p>
+		<p>
+			<button class="btn_4">버튼4</button>
+		</p>
+	</div>
+
+</body>
+</html>

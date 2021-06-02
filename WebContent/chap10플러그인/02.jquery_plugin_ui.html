@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>jQuery UI Draggable - Default functionality</title>
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<link rel="stylesheet" href="css/jquery-ui.min.css" type="text/css">
+<link rel="stylesheet" href="css/jquery-ui.structure.min.css" type="text/css">
+<link rel="stylesheet" href="css/jquery-ui.theme.min.css" type="text/css">
+
+<script src="js/jquery-ui.min.js"></script> <!-- 제이쿼리 라이브러리 연동 -->
+<script>
+$( function() {
+    $( "#datepicker" ).datepicker(); //플러그인연동
+    $("#startDate").datepicker({
+    	minDate:+1,
+    	maxDate:"+1M" //M은 한달을 의미 
+    	});
+    $( "#tabs" ).tabs();
+  } );
+  
+</script>
+</head>
+<body>
+<div id="tabs">
+  <ul>
+    <li><a href="#tabs-1">Nunc tincidunt</a></li>
+    <li><a href="#tabs-2">Proin dolor</a></li>
+  </ul>
+  <div id="tabs-1">
+  <p>Date: <input type="text" id="datepicker"></p>
+  </div>
+  <div id="tabs-2">
+  	<p>
+<label for="startDate">날짜선택</label>
+<input type="text" name="startDate" id="startDate">
+</p>
+  </div>
+</div>
+
+
+</body>
+</html>

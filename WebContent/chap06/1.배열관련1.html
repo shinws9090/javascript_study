@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+$(function (){
+	var obj=[
+		{"area":"서울"},
+		{"area":"부산"},
+		{"area":"대구"}
+	]
+	
+	$(obj).each(function(i,o){
+		console.log(i+":",o);
+	})
+	$.each($("#menu2 li"),function(i,o){
+		console.log(i+":",o);
+	})
+	
+	$.each($("#menu2 li"),function(i){
+		console.log(i+":",$(this));
+	})
+	
+	var liColor=[
+		{"color":"red"},
+		{"color":"blue"},
+		{"color":"green"}
+	]
+	
+	$.each($("#menu2 li"),function(i){
+		$(this).css("color",liColor[i%3].color)
+		/* if(i==1){
+			$(this).css("color","red");
+		}
+		if(i==2){
+			$(this).css("color","blue");
+		} */
+	})
+	
+	
+	
+	
+});
+</script>
+</head>
+<body>
+
+	<ul id="menu1">
+	<li>메뉴</li>
+	<li>메뉴</li>
+	<li>메뉴</li>
+	<li>메뉴</li>
+	</ul>
+	<ul id="menu2">
+	<li>메뉴</li>
+	<li>메뉴</li>
+	<li>메뉴</li>
+	<li>메뉴</li>
+	</ul>
+	
+	
+
+
+</body>
+</html>

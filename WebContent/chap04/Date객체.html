@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>\
+<script type="text/javascript">
+
+var today = new Date();
+
+var nowMonth = today.getMonth();
+var nowDate = today.getDate();
+   var nowDay = today.getDay();
+   
+   document.write("<h1>오늘 날짜 정보</h1>");
+   document.write("현재월 : "+ nowMonth,"<br>" );
+   document.write("현재일 : "+ nowDate,"<br>" );
+   document.write("현재요일 : "+ nowDay,"<br>" );
+   
+   var worldcup = new Date(2002,4,31);
+   var theMonth = worldcup.getMonth();
+   var theDate = worldcup.getDate();
+   var theDay = worldcup.getDay();
+   
+   document.write("<h1>월드컵 날짜 정보</h1>");
+   document.write("2002년 월드컵 몇 월 : "+ theMonth,"<br>" );
+   document.write("2002년 월드컵 몇 일 : "+ theDate,"<br>" );
+   document.write("2002년 월드컵 무슨요일: "+ theDay,"<br>" );
+   
+   
+   function yoil(theDay){
+	   var y;
+	   switch (theDay) {
+	case :
+		
+		break;
+
+	default:
+		break;
+	}
+   
+   
+   
+   var today = new Date();
+   var nowYear = today.getFullYear();
+   
+   var theDate = new Date(nowYear,11,31);
+   var diffDate = theDate.getTime()-today.getTime();
+   
+   var result = Math.ceil(diffDate/(1000*60*60*24));
+   
+   document.write("연말 D-day : "+result+"일 남았습니다");
+   
+	   
+	   
+	   
+   }
+   
+   
+
+
+
+
+</script>
+
+
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,48 @@
+@charset "UTF-8";
+
+/* Fontawesome 4.7 */
+@import url('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+
+/* Google Web Fonts CDN */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+
+body{
+	font-family: 'Noto Sans KR', sans-serif;
+	
+	/*정가운대 배치*/
+	display: flex;	
+	justify-content: center; /*수평 가운데  flex되어야함*/
+	align-items: center;
+	height: 100vh; /*vh는 모니터의 높이가 100으로봄 */
+
+	font-size: 16px;
+}
+
+.star-rating{
+	background-color: #333;
+	width: 250px;
+	text-align: center;
+	border-radius: 5px;
+	padding: 5px;
+}
+
+.star-rating div{
+	float:left;
+	width: 50%;
+}
+
+.stars{
+	
+}
+
+.stars .fa{
+	font-size: 18px;
+	cursor: pointer;
+}
+.stars .fa.active{
+	color:yellow;
+	text-shadow: 0 0 5px;
+}
+.print{
+	color: #fff;
+}

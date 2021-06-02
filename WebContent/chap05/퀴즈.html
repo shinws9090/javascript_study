@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+var arrNum=0;
+	function chColor() {
+		var color = ["#ff0","#6c0","#fcf","#cf0","#39f"];
+		arrNum++;
+		if(arrNum>=color.length){
+			arrNum=0;
+		}
+		
+		var bodyTag = document.getElementById("theBody");
+		bodyTag.style.backgroundColor=color[arrNum];
+	}
+</script>
+</head>
+<body id="theBody">
+	<button onclick="chColor();">배경 색상 바꾸기</button>
+</body>
+</html>

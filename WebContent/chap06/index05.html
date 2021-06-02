@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+$(function f(){
+	var style_1 = {
+			"background-color":"#ff0",
+			"border":"1px solid #ccc"
+	};
+	var style_2 = {
+			"background-color":"#0ff",
+			"border":"1px dashed #f00"
+	};
+	
+	$("#a").parents().css(style_1);
+	$("#b").parents("div").css(style_2);
+	$("#c").closest("div").css(style_2);
+
+});
+</script>
+</head>
+<body>
+	<section>
+		<div>
+			<p id="a">내용1</p>
+		</div>
+	</section>
+	<hr>
+	<section>
+		<div>
+			<p id="b">내용2</p>
+		</div>
+	</section>
+	<hr>
+	<hr>
+	<hr>
+	<section>
+		<div>
+			<p id="c">내용3</p>
+		</div>
+	</section>
+
+</body>
+</html>

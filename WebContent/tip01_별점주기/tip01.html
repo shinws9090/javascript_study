@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>별점주기 with jquery</title>
+<link rel="stylesheet" href="css/style.css" type="text/css">
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+	$(function() {
+		$(".fa").click(function() {
+			$(this).addClass("active");
+			$(this).prevAll().addClass("active");
+			$(this).nextAll().removeClass("active");
+		
+		var starRate = $(this).index() + 1;
+		/* $('.print').text(starRate); */
+		/* if(starRate==1){
+			$(".print").html('<img src="images/star-lv1.png">'+"별로");
+		}else if(starRate==2){
+			$(".print").html('<img src="images/star-lv2.png">'+'흠');
+		}else if(starRate==3){
+			$(".print").html('<img src="images/star-lv3.png">'+'그닥');
+		}else if(starRate==4){
+			$(".print").html('<img src="images/star-lv4.png">'+'오올');
+		}else if(starRate==5){
+			$(".print").html('<img src="images/star-lv5.png">'+'무야호!!');
+		} */
+		var notice = ['별로','흠','그닥','오올','무야호!!!!'];
+		$(".print").html('<img src="images/star-lv'+starRate+'.png">'+notice[$(this).index()]);
+		});
+	});
+</script>
+</head>
+<body>
+
+	<div class="star-rating">
+		<div class="stars">
+			<i class="fa fa-star"></i> <i class="fa fa-star"></i> <i
+				class="fa fa-star"></i> <i class="fa fa-star"></i> <i
+				class="fa fa-star"></i>
+		</div>
+
+		<div class="print">별점주실꺼죠? ㅎ</div>
+	</div>
+
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="" type="text/css">
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+	function abc() {
+		alert("HI");
+	}
+	var btn_2 = $("<p><button class=\"btn_2\">버튼2</button></p>");
+	$(function() {
+		$(".btn_1").on("mouseover", abc);
+		$(document).on("mouseover", ".btn_2", abc);
+
+		$("#wrap").append(btn_2);
+
+		$(".del_1").on("click", function() {
+			$(".btn_1").off("mouseover");
+			alert("버튼1 이벤트 해지 완료");
+		});
+		$(".del_2").on("click", function() {
+			$(document).off("mouseover", ".btn_2");
+			alert("버튼2 이벤트 해지 완료");
+		});
+
+	});
+</script>
+</head>
+<body>
+	<div id="wrap">
+		<p>
+			<button class="btn_1">버튼1</button>
+		</p>
+	</div>
+	<p>
+		<button class="del_1">버튼1 이벤트 해지</button>
+		<button class="del_2">버튼2 이벤트 해지</button>
+	</p>
+
+
+</body>
+</html>

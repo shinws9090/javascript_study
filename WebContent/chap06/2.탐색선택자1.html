@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+$(function (){
+	$("#menu1 li:first").css("background-color","#ff0");
+	$("#menu1 li:last").css("background-color","#0ff");
+	
+	$("#menu2 li:even").css("background-color","#ff0");
+	$("#menu2 li:odd").css("background-color","#0ff");
+	
+	$("#menu3 li").eq(2).css("background-color","#0ff");
+	$("#menu3 li:lt(2)").css("background-color","#f0f");
+	$("#menu3 li:gt(2)").css("background-color","#ff0");
+});
+</script>
+</head>
+<body>
+<h1>first/last</h1>
+	<ul id="menu1">
+	<li>first</li>
+	<li>메뉴</li>
+	<li>메뉴</li>
+	<li>last</li>
+	</ul>
+<h1>even/odd</h1>	
+	<ul id="menu2">
+	<li>even</li>
+	<li>odd</li>
+	<li>even</li>
+	<li>odd</li>
+	</ul>
+	
+<h1>eq(index)/lt(index)/gt(index)</h1>	
+	<ul id="menu3">
+	<li>lt</li>
+	<li>lt</li>
+	<li>eq</li>
+	<li>gt</li>
+	<li>gt</li>
+	</ul>
+
+</body>
+</html>

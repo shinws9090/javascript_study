@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="" type="text/css">
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<style>
+* {
+margin: 0;
+}
+.txt1 {
+width: 50px;
+text-align: center;
+background-color: aqua;
+}
+</style>
+<script>
+	$(function() {
+		$(".txt1").animate({marginLeft:"200px"},1000)
+		.animate({marginTop:"200px"},1000)
+		.queue(function(){
+			$(this).css({background: "red"});
+			$(this).dequeue();
+		})
+		.animate({marginLeft:"0"},1000)
+		.animate({marginTop:"0"},1000);
+	
+	});
+</script>
+</head>
+<body>
+	<p class="txt1">내용1</p>
+</body>
+</html>

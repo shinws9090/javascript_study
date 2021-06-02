@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<script type="text/javascript">
+	function func() {
+		$("#title").css("color", "red");
+	}
+
+	$(func);
+
+	var f = function func() {
+		$("#title").css("color", "red");
+	}
+
+	$(f);
+
+	$(function() {
+		$("#title").css("color", "blue");
+	});
+</script>
+<!--  <script src="js/jq01.js"></script>  -->
+</head>
+<body>
+	<h1 id="title">제목</h1>
+
+
+
+</body>
+</html>

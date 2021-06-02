@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="" type="text/css">
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+	function toggle1(){
+		$(".btn1").hide();
+		$(".btn2").show();
+	}
+	function toggle2(){
+		//표시
+		$(".btn1").show();
+		//숨김
+		$(".btn2").hide();
+	}
+	function btn1Click(){
+		//슬라이드 올라가면서 숨겨짐 
+		$(".box").slideUp(1000,"linear", toggle1 );
+	}
+	function btn2Click(){
+		//점점선명하게
+		$(".box").fadeIn(1000,"swing", toggle2 );
+	}
+	function btn3Click(){
+		//슬라이드반전
+		$(".box").slideToggle(1000,"linear");
+	}
+	function btn4Click(){
+		//투명도
+		$(".box").fadeTo("fast", 0.3 );
+	}
+	function btn5Click(){
+		$(".box").fadeTo("slow", 1 );
+	}
+	
+	$(function() {
+		$(".btn2").hide();
+		
+		$(".btn1").click(btn1Click);
+		$(".btn2").click(btn2Click);
+		$(".btn3").click(btn3Click);
+		$(".btn4").click(btn4Click);
+		$(".btn5").click(btn5Click);
+		
+	});
+</script>
+</head>
+<body>
+	<p>
+		<button class="btn1">slideUp</button>
+		<button class="btn2">fadeIn</button>
+	</p>
+	<p>
+		<button class="btn3">toggleSide</button>
+	</p>
+	<p>
+		<button class="btn4">fadeTo(0.3)</button>
+		<button class="btn5">fadeTo(1)</button>
+	</p>
+	<div class="box">
+		<div class="content">Lorem ipsum dolor sit amet, consectetur
+			adipiscing elit. Maecenas feugiat consectetur nibh, ut luctus urna
+			placerat non. Phasellus consectetur nunc nec mi feugiat egestas.
+			Pellentesque et consectetur mauris, sed rutrum est. Etiam odio nunc,
+			ornare quis urna sed, fermentum fermentum augue. Nam imperdiet
+			vestibulum ipsum quis feugiat. Nunc non pellentesque diam, nec tempor
+			nibh. Ut consequat sem sit amet ullamcorper sodales.</div>
+	</div>
+
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+function f(){
+	$("#id").css("border","1px solid #ccc").css("background-color","#ff0");
+	$(".class").css("border","2px solid black").css("background-color","#f0f");
+	$("h1").css("border","3px solid black").css("background-color","#0ff");
+}
+$(f)
+
+
+function func(){
+	$(".class,#id,h1").css("border","1px solid #ccc").css("background-color","#ff0");
+};
+
+
+function func2(){
+	$("h3.class").css("border","2px solid #ccc").css("background-color","#fff");
+};
+
+
+</script>
+</head>
+<body>
+	<h1>제이쿼리</h1>
+	<h2 id="id">제이쿼리</h2>
+	<h3 class="class">제리쿼리</h3>
+
+	<button onclick="$(func)">색상바꾸기</button>
+	<button onclick="$(func2)">색상바꾸기2</button>
+	<button onclick="$(f)">처음</button>
+</body>
+</html>

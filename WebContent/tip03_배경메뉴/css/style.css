@@ -1,0 +1,64 @@
+@charset "UTF-8";
+/* Fontawesome 4.7 */
+@import
+	url('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css')
+	;
+
+/* Google Web Fonts CDN */
+@import
+	url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap')
+	;
+
+body{
+	margin: 0;
+	font-family: 'Montserrat';
+	background: #333;
+}
+.navi{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	
+	z-index: 100; /* 글자 위로올리기 */
+}
+.navi li{
+	list-style: none;
+}
+.navi li a{
+	font-size: 4em;
+	text-decoration: none;
+	color: #fff;
+	position: relative;
+}
+.navi li a:before{ /*after로 해도 상관음슴  */
+	position: absolute;
+	color: yellowgreen;
+	top: 0;
+	left: 0;
+	
+	width: 10%;
+	overflow: hidden;
+	
+	content: attr(data-text);
+	
+	transition: 0.5s;
+}
+.navi li a:hover:before{ 
+	width: 100%;
+}
+.navi li a:focus:before{ 
+	width: 100%;
+}
+.photo{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width:100%;
+	height: 100%;
+	/* background: url("../images/portrait-initial.jpg") no-repeat center center; */
+	background-image: url("../images/portrait-initial.jpg");
+	background-repeat: no-repeat center center;
+	background-position: center center;
+	background-size: cover;
+}
